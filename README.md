@@ -3,9 +3,13 @@ This is a real-time rendering engine for diamonds and gemstones. It allows preci
 
 The engine runs fully on GPU and uses both rasterization and ray-tracing, as well as post-processing techniques such as bloom and screen-space antialiasing.
 
+It supports many gem shapes, and can render several gems simultaneously.
+
 See it live [here](https://piellardj.github.io/diamond-webgl/).
 
 ## Preview
+
+![Examples of cuts](src/readme/models.png)
 
 ![Round brilliant cut diamond](src/readme/bloom_final.png)
 
