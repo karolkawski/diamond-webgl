@@ -9,9 +9,13 @@ See it live [here](https://piellardj.github.io/diamond-webgl/).
 
 ## Preview
 
-![Examples of cuts](src/readme/models.png)
+![Example of ring](src/readme/ring1.png)
 
 ![Round brilliant cut diamond](src/readme/bloom_final.png)
+
+![Example of ring](src/readme/ring2.png)
+
+![Examples of cuts](src/readme/models.png)
 
 ![Hearts pattern](src/readme/hearts.png)
 

@@ -11,7 +11,7 @@
     <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
     <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
-    <link rel="stylesheet" type="text/css" href="css/page.css?v=2023-02-04T09%3A42%3A34.756Z">
+    <link rel="stylesheet" type="text/css" href="css/page.css?v=2023-02-05T11%3A56%3A41.520Z">
   </head>
 
   <body>
@@ -61,7 +61,7 @@
               Triangles: <span></span>
             </div>
             <div id="facets-count-indicator-indicator-id">
-              Facets: <span></span>
+              Gem facets: <span></span>
             </div>
             <div id="gems-count-indicator-indicator-id">
               Gems: <span></span>
@@ -86,26 +86,12 @@
               <div class="control" id="control-scene-tabs-id">
                 <label>Scene:</label>
                 <div class="tabs compact" id="scene-tabs-id-id">
-                  <input type="radio" name="scene-tabs-id" value="gems" id="scene-tabs-id-gems-id" checked />
-                  <label for="scene-tabs-id-gems-id">Gems</label>
+                  <input type="radio" name="scene-tabs-id" value="engagement-ring" id="scene-tabs-id-engagement-ring-id" checked />
+                  <label for="scene-tabs-id-engagement-ring-id">Ring 1</label>
                   <input type="radio" name="scene-tabs-id" value="ring" id="scene-tabs-id-ring-id" />
-                  <label for="scene-tabs-id-ring-id">Ring</label>
-                  <input type="radio" name="scene-tabs-id" value="engagement-ring" id="scene-tabs-id-engagement-ring-id" />
-                  <label for="scene-tabs-id-engagement-ring-id">Ring 2</label>
-                </div>
-              </div>
-              <div class="control" id="control-display-ring-checkbox-id">
-                <label>Display ring:</label>
-                <div class="checkbox">
-                  <input type="checkbox" id="display-ring-checkbox-id" checked>
-                  <label for="display-ring-checkbox-id" class="checkmark"></label>
-                </div>
-              </div>
-              <div class="control" id="control-reflection-checkbox-id">
-                <label>Reflection:</label>
-                <div class="checkbox">
-                  <input type="checkbox" id="reflection-checkbox-id" checked>
-                  <label for="reflection-checkbox-id" class="checkmark"></label>
+                  <label for="scene-tabs-id-ring-id">Ring 2</label>
+                  <input type="radio" name="scene-tabs-id" value="gems" id="scene-tabs-id-gems-id" />
+                  <label for="scene-tabs-id-gems-id">Gems</label>
                 </div>
               </div>
               <div class="control" id="control-auto-rotate-checkbox-id">
@@ -122,6 +108,13 @@
                   <label for="auto-rotate-gems-checkbox-id" class="checkmark"></label>
                 </div>
               </div>
+              <div class="control" id="control-display-indicators-checkbox-id">
+                <label>Indicators:</label>
+                <div class="checkbox">
+                  <input type="checkbox" id="display-indicators-checkbox-id" checked>
+                  <label for="display-indicators-checkbox-id" class="checkmark"></label>
+                </div>
+              </div>
             </div>
           </section>
           <hr />
@@ -136,6 +129,61 @@
                   <div class="color-picker  compact" id="background-color-picker-id" data-current-color="#CCCCCC">
                     <div class="color-preview">&nbsp;</div>
                     <span class="color-value">#CCCCCC</span>
+                  </div>
+                </div>
+              </div>
+              <div class="control" id="control-reflection-checkbox-id">
+                <label>Reflection:</label>
+                <div class="checkbox">
+                  <input type="checkbox" id="reflection-checkbox-id" checked>
+                  <label for="reflection-checkbox-id" class="checkmark"></label>
+                </div>
+              </div>
+              <div class="control" id="control-dispersion-range-id">
+                <label>Dispersion:</label>
+                <div class="range-container">
+                  <input type="range" min="0" max="0.3" value="0" step="0.001" class="slider" id="dispersion-range-id">
+                  <div class="range-skin-container">
+                    <div class="range-stub">
+                      <span class="range-bar range-bar-left range-stub-left"></span>
+                    </div>
+                    <div class="range-progress">
+                      <div class="range-progress-left">
+                        <span class="range-bar range-bar-left"></span>
+                        <span class="range-handle"></span>
+                        <output for="dispersion-range-id" class="range-tooltip"></output>
+                      </div>
+                      <div class="range-progress-right">
+                        <span class="range-bar range-bar-right"></span>
+                      </div>
+                    </div>
+                    <div class="range-stub">
+                      <span class="range-bar range-bar-right range-stub-right"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="control" id="control-ray-depth-range-id">
+                <label>Ray depth:</label>
+                <div class="range-container">
+                  <input type="range" min="3" max="7" value="4" step="0.1" class="slider" id="ray-depth-range-id">
+                  <div class="range-skin-container">
+                    <div class="range-stub">
+                      <span class="range-bar range-bar-left range-stub-left"></span>
+                    </div>
+                    <div class="range-progress">
+                      <div class="range-progress-left">
+                        <span class="range-bar range-bar-left"></span>
+                        <span class="range-handle"></span>
+                        <output for="ray-depth-range-id" class="range-tooltip"></output>
+                      </div>
+                      <div class="range-progress-right">
+                        <span class="range-bar range-bar-right"></span>
+                      </div>
+                    </div>
+                    <div class="range-stub">
+                      <span class="range-bar range-bar-right range-stub-right"></span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -172,7 +220,68 @@
             </div>
           </section>
           <hr />
-          <section class="controls-section">
+          <section class="controls-section" id="section-ring-section">
+            <h2>Ring</h2>
+
+            <div class="controls-list">
+              <div class="control" id="control-support-type-tabs-id">
+                <label>Metal:</label>
+                <div class="tabs compact" id="support-type-tabs-id-id">
+                  <input type="radio" name="support-type-tabs-id" value="gold" id="support-type-tabs-id-gold-id" />
+                  <label for="support-type-tabs-id-gold-id">Gold</label>
+                  <input type="radio" name="support-type-tabs-id" value="silver" id="support-type-tabs-id-silver-id" checked />
+                  <label for="support-type-tabs-id-silver-id">Silver</label>
+                </div>
+              </div>
+              <div class="control" id="control-display-ring-checkbox-id">
+                <label>Display ring:</label>
+                <div class="checkbox">
+                  <input type="checkbox" id="display-ring-checkbox-id" checked>
+                  <label for="display-ring-checkbox-id" class="checkmark"></label>
+                </div>
+              </div>
+              <div class="control" id="control-major-gem-tabs-id">
+                <label>Major gem cut:</label>
+                <div class="tabs compact" id="major-gem-tabs-id-id">
+                  <input type="radio" name="major-gem-tabs-id" value="cushion" id="major-gem-tabs-id-cushion-id" checked />
+                  <label for="major-gem-tabs-id-cushion-id">Cushion</label>
+                  <input type="radio" name="major-gem-tabs-id" value="round" id="major-gem-tabs-id-round-id" />
+                  <label for="major-gem-tabs-id-round-id">Round</label>
+                </div>
+              </div>
+              <div class="control" id="control-major-gem-color-colorpicker-id">
+                <label>Major gem color:</label>
+
+                <div class="color-picker-container">
+                  <div class="color-picker  compact" id="major-gem-color-colorpicker-id" data-current-color="#CFD3D9">
+                    <div class="color-preview">&nbsp;</div>
+                    <span class="color-value">#CFD3D9</span>
+                  </div>
+                </div>
+              </div>
+              <div class="control" id="control-minor-gem-tabs-id">
+                <label>Minor gem cut:</label>
+                <div class="tabs compact" id="minor-gem-tabs-id-id">
+                  <input type="radio" name="minor-gem-tabs-id" value="round" id="minor-gem-tabs-id-round-id" />
+                  <label for="minor-gem-tabs-id-round-id">Round</label>
+                  <input type="radio" name="minor-gem-tabs-id" value="emerald" id="minor-gem-tabs-id-emerald-id" checked />
+                  <label for="minor-gem-tabs-id-emerald-id">Emerald</label>
+                </div>
+              </div>
+              <div class="control" id="control-minor-gem-color-colorpicker-id">
+                <label>Minor gems color:</label>
+
+                <div class="color-picker-container">
+                  <div class="color-picker  compact" id="minor-gem-color-colorpicker-id" data-current-color="#CFD3D9">
+                    <div class="color-preview">&nbsp;</div>
+                    <span class="color-value">#CFD3D9</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <hr />
+          <section class="controls-section" id="section-lighting-section">
             <h2>Lighting</h2>
 
             <div class="controls-list">
@@ -183,13 +292,6 @@
                   <label for="light-direction-tabs-id-downward-id">Top</label>
                   <input type="radio" name="light-direction-tabs-id" value="upward" id="light-direction-tabs-id-upward-id" />
                   <label for="light-direction-tabs-id-upward-id">Bottom</label>
-                </div>
-              </div>
-              <div class="control" id="control-display-skybox-checkbox-id">
-                <label>Use as skybox:</label>
-                <div class="checkbox">
-                  <input type="checkbox" id="display-skybox-checkbox-id">
-                  <label for="display-skybox-checkbox-id" class="checkmark"></label>
                 </div>
               </div>
               <div class="control" id="control-head-shadow-range-id">
@@ -248,12 +350,12 @@
     <script type="text/javascript">
       var Page = Page || {};
       Object.defineProperty(Page, "version", {
-        value: "2023-02-04T09%3A42%3A34.756Z",
+        value: "2023-02-05T11%3A56%3A41.520Z",
         writable: false,
       });
     </script>
-    <script src="script/page.min.js?v=2023-02-04T09%3A42%3A34.756Z"></script>
-    <script src="script/main.min.js?v=2023-02-04T09%3A42%3A34.756Z"></script>
+    <script src="script/page.min.js?v=2023-02-05T11%3A56%3A41.520Z"></script>
+    <script src="script/main.min.js?v=2023-02-05T11%3A56%3A41.520Z"></script>
   </body>
 
 </html>
